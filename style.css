@@ -3,6 +3,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -11,7 +12,7 @@ color:white;
 line-height:1.6;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 text-align:center;
@@ -31,11 +32,12 @@ margin-bottom:20px;
 
 .hero h1{
 font-size:3rem;
+margin-bottom:10px;
 }
 
 .tagline{
-margin-top:10px;
 font-size:1.2rem;
+min-height:40px;
 }
 
 .cgpa{
@@ -48,19 +50,19 @@ color:#fde047;
 margin-top:25px;
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
 gap:15px;
+flex-wrap:wrap;
 }
 
 .btn,
 .github-btn,
 .linkedin-btn{
-text-decoration:none;
 padding:12px 25px;
 border-radius:30px;
+text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 color:white;
+transition:0.3s;
 }
 
 .btn{
@@ -86,10 +88,10 @@ transform:translateY(-4px);
 nav{
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
 gap:20px;
-padding:15px;
+flex-wrap:wrap;
 background:#111827;
+padding:15px;
 position:sticky;
 top:0;
 z-index:100;
@@ -105,7 +107,7 @@ nav a:hover{
 color:#06b6d4;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:50px 10%;
@@ -137,8 +139,8 @@ box-shadow:0 0 20px rgba(6,182,212,0.5);
 
 .skills-container{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
+flex-wrap:wrap;
 gap:15px;
 }
 
@@ -167,6 +169,27 @@ text-align:center;
 padding:20px;
 }
 
+/* TOP BUTTON */
+
+#topBtn{
+display:none;
+position:fixed;
+bottom:20px;
+right:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#06b6d4;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
+#topBtn:hover{
+transform:scale(1.1);
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -180,13 +203,13 @@ width:140px;
 height:140px;
 }
 
-section{
-padding:40px 20px;
-}
-
 .buttons{
 flex-direction:column;
 align-items:center;
+}
+
+section{
+padding:40px 20px;
 }
 
 }
