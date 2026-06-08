@@ -29,4 +29,4 @@ A responsive personal portfolio website showcasing my education, skills, project
 
 ## 👩‍💻 Author
 
-Manchu Saranya
+Manchu Saranya.
