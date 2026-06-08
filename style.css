@@ -1,181 +1,224 @@
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
+body{
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #0f766e
+    );
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    color:white;
+    line-height:1.6;
 }
 
-/* Header */
-
-header {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:60px 20px;
 }
 
-.tagline {
-    font-size: 20px;
-    margin-bottom: 10px;
+.profile-pic{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #06b6d4;
+    box-shadow:0 0 30px #06b6d4;
+    transition:0.4s;
 }
 
-.cgpa {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.profile-pic:hover{
+    transform:scale(1.05);
 }
 
-/* Resume Button */
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: white;
-    color: #4f46e5;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+header h1{
+    margin-top:20px;
+    font-size:3rem;
+    color:#06b6d4;
 }
 
-.btn:hover {
-    transform: scale(1.05);
+.tagline{
+    margin-top:10px;
+    font-size:1.2rem;
+    color:#e2e8f0;
 }
 
-/* Navigation */
-
-nav {
-    background: #111827;
-    padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.cgpa{
+    margin-top:10px;
+    font-size:1.1rem;
+    color:#facc15;
+    font-weight:bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
-    transition: 0.3s;
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#06b6d4;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
 }
 
-nav a:hover {
-    color: #60a5fa;
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #06b6d4;
 }
 
-/* Sections */
+/* NAVBAR */
 
-section {
-    padding: 60px 20px;
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:15px;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.1);
+    z-index:100;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #4f46e5;
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
 }
 
-/* Cards */
-
-.card {
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+nav a:hover{
+    color:#06b6d4;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* SECTIONS */
+
+section{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
 }
 
-/* Skills */
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+section h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:2rem;
+    color:#06b6d4;
 }
 
-.skills-container span {
-    background: #4f46e5;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-size: 15px;
+/* CARDS */
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+    transition:0.4s;
 }
 
-/* Contact */
-
-#contact {
-    text-align: center;
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(6,182,212,0.5);
 }
 
-#contact p {
-    margin: 12px;
-    font-size: 18px;
+.card h3{
+    color:#06b6d4;
+    margin-bottom:10px;
 }
 
-#contact a {
-    color: #4f46e5;
-    text-decoration: none;
+/* SKILLS */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+.skills-container span{
+    background:#06b6d4;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    transition:0.3s;
 }
 
-/* Footer */
-
-footer {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+.skills-container span:hover{
+    transform:scale(1.1);
 }
 
-/* Mobile Responsive */
+/* CONTACT */
 
-@media (max-width: 768px) {
+#contact{
+    text-align:center;
+}
 
-    h1 {
-        font-size: 32px;
+#contact p{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+#contact i{
+    color:#06b6d4;
+    margin-right:10px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:rgba(255,255,255,0.05);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#06b6d4;
+    border-radius:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
     }
 
-    .tagline {
-        font-size: 16px;
+    .profile-pic{
+        width:140px;
+        height:140px;
     }
 
-    nav a {
-        display: block;
-        margin: 10px;
+    nav{
+        gap:10px;
     }
 
-    section {
-        padding: 40px 15px;
-    }
-
-    .card {
-        padding: 20px;
+    section h2{
+        font-size:1.6rem;
     }
 }
-```
